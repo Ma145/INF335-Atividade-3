@@ -1,9 +1,8 @@
+//Correção: Marcelo Pereira Teixeira da Silva e Murilo de Paula Araujo 
+
 package br.unicamp.ic.inf335.beans;
 
 public class ProdutoBean implements java.io.Serializable, Comparable<ProdutoBean>{
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	
 	private String codigo;
@@ -54,7 +53,6 @@ public class ProdutoBean implements java.io.Serializable, Comparable<ProdutoBean
 		estado = new String();
 	}
 	
-	
 	public ProdutoBean(String codigo, String nome, String descricao, Double valor, String estado) {
 		super();
 		this.codigo = codigo;
@@ -68,12 +66,9 @@ public class ProdutoBean implements java.io.Serializable, Comparable<ProdutoBean
 	public int compareTo(ProdutoBean p) {
 		if (valor > p.getValor()) {
 			return 1;
-		} else if (valor > p.getValor()) {
+		} else if (valor < p.getValor()) {
 			return -1;
 		} else
 		    return 0;
 	}
-	
-	
-
 }
